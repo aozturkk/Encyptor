@@ -38,6 +38,17 @@
             this.base64Text = new System.Windows.Forms.RichTextBox();
             this.base64 = new System.Windows.Forms.Button();
             this.hashingPanel = new System.Windows.Forms.Panel();
+            this.hashFileOption = new System.Windows.Forms.RadioButton();
+            this.hashTextOption = new System.Windows.Forms.RadioButton();
+            this.calculateHash = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.sha256Output = new System.Windows.Forms.RichTextBox();
+            this.hashFileNameLabel = new System.Windows.Forms.Label();
+            this.fileHashing = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.md5Output = new System.Windows.Forms.RichTextBox();
+            this.hasingText = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.aesPanel = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,17 +66,6 @@
             this.aesOutput = new System.Windows.Forms.RichTextBox();
             this.aesText = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.hashFileOption = new System.Windows.Forms.RadioButton();
-            this.hashTextOption = new System.Windows.Forms.RadioButton();
-            this.calculateHash = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.sha256Output = new System.Windows.Forms.RichTextBox();
-            this.hashFileNameLabel = new System.Windows.Forms.Label();
-            this.fileHashing = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.md5Output = new System.Windows.Forms.RichTextBox();
-            this.hasingText = new System.Windows.Forms.RichTextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.hash = new System.Windows.Forms.Button();
             this.aes = new System.Windows.Forms.Button();
             this.base64Panel.SuspendLayout();
@@ -180,6 +180,112 @@
             this.hashingPanel.Size = new System.Drawing.Size(404, 391);
             this.hashingPanel.TabIndex = 2;
             // 
+            // hashFileOption
+            // 
+            this.hashFileOption.AutoSize = true;
+            this.hashFileOption.Location = new System.Drawing.Point(3, 150);
+            this.hashFileOption.Name = "hashFileOption";
+            this.hashFileOption.Size = new System.Drawing.Size(47, 17);
+            this.hashFileOption.TabIndex = 16;
+            this.hashFileOption.Text = "File :";
+            this.hashFileOption.UseVisualStyleBackColor = true;
+            // 
+            // hashTextOption
+            // 
+            this.hashTextOption.AutoSize = true;
+            this.hashTextOption.Checked = true;
+            this.hashTextOption.Location = new System.Drawing.Point(3, 98);
+            this.hashTextOption.Name = "hashTextOption";
+            this.hashTextOption.Size = new System.Drawing.Size(52, 17);
+            this.hashTextOption.TabIndex = 15;
+            this.hashTextOption.TabStop = true;
+            this.hashTextOption.Text = "Text :";
+            this.hashTextOption.UseVisualStyleBackColor = true;
+            // 
+            // calculateHash
+            // 
+            this.calculateHash.Location = new System.Drawing.Point(140, 199);
+            this.calculateHash.Name = "calculateHash";
+            this.calculateHash.Size = new System.Drawing.Size(75, 23);
+            this.calculateHash.TabIndex = 14;
+            this.calculateHash.Text = "Calculate";
+            this.calculateHash.UseVisualStyleBackColor = true;
+            this.calculateHash.Click += new System.EventHandler(this.calculateHash_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 293);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "sha256 :";
+            // 
+            // sha256Output
+            // 
+            this.sha256Output.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.sha256Output.Location = new System.Drawing.Point(57, 285);
+            this.sha256Output.Name = "sha256Output";
+            this.sha256Output.Size = new System.Drawing.Size(246, 34);
+            this.sha256Output.TabIndex = 12;
+            this.sha256Output.Text = "";
+            // 
+            // hashFileNameLabel
+            // 
+            this.hashFileNameLabel.AutoSize = true;
+            this.hashFileNameLabel.Location = new System.Drawing.Point(138, 152);
+            this.hashFileNameLabel.Name = "hashFileNameLabel";
+            this.hashFileNameLabel.Size = new System.Drawing.Size(68, 13);
+            this.hashFileNameLabel.TabIndex = 11;
+            this.hashFileNameLabel.Text = "Choose file ..";
+            // 
+            // fileHashing
+            // 
+            this.fileHashing.Location = new System.Drawing.Point(57, 147);
+            this.fileHashing.Name = "fileHashing";
+            this.fileHashing.Size = new System.Drawing.Size(75, 23);
+            this.fileHashing.TabIndex = 10;
+            this.fileHashing.Text = "File";
+            this.fileHashing.UseVisualStyleBackColor = true;
+            this.fileHashing.Click += new System.EventHandler(this.fileHashing_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(14, 242);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "md5 :";
+            // 
+            // md5Output
+            // 
+            this.md5Output.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.md5Output.Location = new System.Drawing.Point(57, 234);
+            this.md5Output.Name = "md5Output";
+            this.md5Output.Size = new System.Drawing.Size(246, 34);
+            this.md5Output.TabIndex = 6;
+            this.md5Output.Text = "";
+            // 
+            // hasingText
+            // 
+            this.hasingText.Location = new System.Drawing.Point(57, 87);
+            this.hasingText.Name = "hasingText";
+            this.hasingText.Size = new System.Drawing.Size(263, 39);
+            this.hasingText.TabIndex = 4;
+            this.hasingText.Text = "";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Location = new System.Drawing.Point(137, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Hashing";
+            // 
             // aesPanel
             // 
             this.aesPanel.Controls.Add(this.label8);
@@ -208,9 +314,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(312, 188);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 13);
+            this.label8.Size = new System.Drawing.Size(83, 13);
             this.label8.TabIndex = 26;
-            this.label8.Text = "(Must be 16 byte)";
+            this.label8.Text = "(Must be 8 byte)";
             // 
             // label5
             // 
@@ -219,7 +325,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 13);
             this.label5.TabIndex = 25;
-            this.label5.Text = "(Must be 32 byte)";
+            this.label5.Text = "(Must be 16 byte)";
             // 
             // aesDecrypt
             // 
@@ -350,112 +456,6 @@
             this.label10.Size = new System.Drawing.Size(35, 17);
             this.label10.TabIndex = 3;
             this.label10.Text = "Aes";
-            // 
-            // hashFileOption
-            // 
-            this.hashFileOption.AutoSize = true;
-            this.hashFileOption.Location = new System.Drawing.Point(3, 150);
-            this.hashFileOption.Name = "hashFileOption";
-            this.hashFileOption.Size = new System.Drawing.Size(47, 17);
-            this.hashFileOption.TabIndex = 16;
-            this.hashFileOption.Text = "File :";
-            this.hashFileOption.UseVisualStyleBackColor = true;
-            // 
-            // hashTextOption
-            // 
-            this.hashTextOption.AutoSize = true;
-            this.hashTextOption.Checked = true;
-            this.hashTextOption.Location = new System.Drawing.Point(3, 98);
-            this.hashTextOption.Name = "hashTextOption";
-            this.hashTextOption.Size = new System.Drawing.Size(52, 17);
-            this.hashTextOption.TabIndex = 15;
-            this.hashTextOption.TabStop = true;
-            this.hashTextOption.Text = "Text :";
-            this.hashTextOption.UseVisualStyleBackColor = true;
-            // 
-            // calculateHash
-            // 
-            this.calculateHash.Location = new System.Drawing.Point(140, 199);
-            this.calculateHash.Name = "calculateHash";
-            this.calculateHash.Size = new System.Drawing.Size(75, 23);
-            this.calculateHash.TabIndex = 14;
-            this.calculateHash.Text = "Calculate";
-            this.calculateHash.UseVisualStyleBackColor = true;
-            this.calculateHash.Click += new System.EventHandler(this.calculateHash_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 293);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "sha256 :";
-            // 
-            // sha256Output
-            // 
-            this.sha256Output.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.sha256Output.Location = new System.Drawing.Point(57, 285);
-            this.sha256Output.Name = "sha256Output";
-            this.sha256Output.Size = new System.Drawing.Size(246, 34);
-            this.sha256Output.TabIndex = 12;
-            this.sha256Output.Text = "";
-            // 
-            // hashFileNameLabel
-            // 
-            this.hashFileNameLabel.AutoSize = true;
-            this.hashFileNameLabel.Location = new System.Drawing.Point(138, 152);
-            this.hashFileNameLabel.Name = "hashFileNameLabel";
-            this.hashFileNameLabel.Size = new System.Drawing.Size(68, 13);
-            this.hashFileNameLabel.TabIndex = 11;
-            this.hashFileNameLabel.Text = "Choose file ..";
-            // 
-            // fileHashing
-            // 
-            this.fileHashing.Location = new System.Drawing.Point(57, 147);
-            this.fileHashing.Name = "fileHashing";
-            this.fileHashing.Size = new System.Drawing.Size(75, 23);
-            this.fileHashing.TabIndex = 10;
-            this.fileHashing.Text = "File";
-            this.fileHashing.UseVisualStyleBackColor = true;
-            this.fileHashing.Click += new System.EventHandler(this.fileHashing_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 242);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "md5 :";
-            // 
-            // md5Output
-            // 
-            this.md5Output.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.md5Output.Location = new System.Drawing.Point(57, 234);
-            this.md5Output.Name = "md5Output";
-            this.md5Output.Size = new System.Drawing.Size(246, 34);
-            this.md5Output.TabIndex = 6;
-            this.md5Output.Text = "";
-            // 
-            // hasingText
-            // 
-            this.hasingText.Location = new System.Drawing.Point(57, 87);
-            this.hasingText.Name = "hasingText";
-            this.hasingText.Size = new System.Drawing.Size(263, 39);
-            this.hasingText.TabIndex = 4;
-            this.hasingText.Text = "";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(137, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Hashing";
             // 
             // hash
             // 
