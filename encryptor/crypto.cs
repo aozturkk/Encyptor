@@ -19,6 +19,7 @@ namespace encryptor
             string output;
             try
             {
+
                 var base64EncodedBytes = System.Convert.FromBase64String(text);
                 output = System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
             }
